@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Index</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <h1>{{title}}</h1>
+    {% if flg %}
+    <p style="background-color: red; font-weight: bold">警告！</p>
+    {% else %}
+    <p style="background-color: lightblue">Information</p>
+    {% endif %}
+    <p>{{message}}</p>
+  </body>
+</html>

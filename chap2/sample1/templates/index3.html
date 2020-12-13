@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Index</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <h1>{{title}}</h1>
+    <p>{{message}}</p>
+    {% for item in data %}
+    <li>{{item}}</li>
+    {% endfor %}
+  </body>
+</html>

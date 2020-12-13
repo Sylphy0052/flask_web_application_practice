@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Index</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <h1>{{title}}</h1>
+    <p>{{message}}</p>
+    <form method="post" action="/">
+      <div>
+        <input type="checkbox" name="check" id="ck1" />
+        <label for="ck1">Checkbox</label>
+      </div>
+      <div>
+        <input type="radio" name="radio" id="r1" value="A" />
+        <label for="r1">Radio1</label>
+      </div>
+      <div>
+        <input type="radio" name="radio" id="r2" value="B" />
+        <label for="r2">Radio2</label>
+      </div>
+      <div>
+        <select name="sel" multiple>
+          <option>Orange</option>
+          <option>Grape</option>
+          <option>Lemon</option>
+          <option>Pineapple</option>
+        </select>
+      </div>
+      <div>
+        <input type="submit" />
+      </div>
+      <!--<input type="text" name="field" />
+      <input type="submit" />-->
+    </form>
+  </body>
+</html>

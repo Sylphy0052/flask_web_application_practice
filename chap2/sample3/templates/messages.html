@@ -1,0 +1,24 @@
+{% extends "layout.html" %} {% block title %} Message {% endblock %} {% block
+headline %} {{ title }} {% endblock %} {% block content %}
+<div class="logout"><a href="/logout">Logout</a></div>
+<p>{{ message }}</p>
+<form method="post" action="/">
+  <table>
+    <tr>
+      <th>Message</th>
+      <td>
+        <input type="text" name="content" width="80" />
+      </td>
+      <td>
+        <input type="submit" value="POST!!" />
+      </td>
+    </tr>
+  </table>
+</form>
+<hr />
+<ul>
+  {% for item in data | reverse %}
+  <li>{{ item[1] }} ({{ item[0] }})</li>
+  {% endfor %}
+</ul>
+{% endblock %} {% block footer %} copyright 2020 Sylphy {% endblock %}
