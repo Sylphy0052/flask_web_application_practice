@@ -9,7 +9,7 @@ def index():
     title = 'Index'
     msg = 'This is Bootstrap sample'
     return render_template(
-        'index.html',
+        'index1.html',
         title=title,
         message=msg
     )

@@ -46,7 +46,75 @@ headline %} {{ title }} {% endblock %} {% block content %}
 <div class="form-group">
   <input type="submit" class="form-control btn btn-primary" />
 </div>
-<!--
+<hr />
+<div class="m-1" data-toggle="buttons">
+  <label class="btn btn-primary active">
+    <input type="checkbox" checked /> Checkbox
+  </label>
+</div>
+<div class="m-1 btn-group" data-toggle="buttons">
+  <label class="btn btn-primary active">
+    <input type="radio" name="options" id="r1" checked />Radio 1
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="r2" />Radio 2
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="r3" />Radio 3
+  </label>
+</div>
+<hr />
+<div class="form-group">
+  <label for="sel1">Select 1</label>
+  <select class="form-control" id="sel1">
+    <option>Windows</option>
+    <option>macOS</option>
+    <option>Linux</option>
+    <option>ChromeOS</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="sel2">Select 2</label>
+  <select class="form-control" id="sel1" size="5">
+    <option>Windows</option>
+    <option>macOS</option>
+    <option>Linux</option>
+    <option>ChromeOS</option>
+  </select>
+</div>
+<hr />
+{% if flg == None %}
+<div class="alert alert-light" role="alert">
+  {% elif flg %}
+  <div class="alert alert-primary" role="alert">
+    {% else %}
+    <div class="alert alert-danger" role="alert">
+      {% endif %} {{ alert }}
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <form method="post" action="/">
+      <div class="form-group">
+        <label for="sel1">select your platform:</label>
+        <select class="form-control" id="sel1" name="platform">
+          <option>Windows</option>
+          <option>macOS</option>
+          <option>Linux</option>
+          <option>ChromeOS</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="submit" />
+      </div>
+    </form>
+
+    <!--
 <button class="m-1 btn">Button default</button>
 <button class="m-1 btn btn-secondary">Button secondary</button>
 <button class="m-1 btn btn-success">Button success</button>
@@ -57,4 +125,6 @@ headline %} {{ title }} {% endblock %} {% block content %}
 <button class="m-1 btn btn-dark">Button dark</button>
 <button class="m-1 btn btn-link">Button link</button>
 -->
-{% endblock %} {% block footer %} copyright 2020 Sylphy {% endblock %}
+    {% endblock %} {% block footer %} copyright 2020 Sylphy {% endblock %}
+  </div>
+</div>

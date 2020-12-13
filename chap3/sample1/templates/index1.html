@@ -1,0 +1,234 @@
+{% extends "layout.html" %}
+
+{% block title %} Index {% endblock %}
+
+{% block headline %} {{ title }} {% endblock %}
+
+{% block content %}
+<!--
+<div class="modal fade" id="dlog">
+    <div class="modal-dialog" role="document">
+        <div class="alert alert-primary" role="alert">
+            アラートを表示する。
+        </div>                
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary"
+        data-toggle="modal" data-target="#dlog">
+    Modal Dialog!
+</button>
+
+<hr>
+
+-->
+
+<!--
+<div class="form-control">
+<p id="msg"></p>
+</div>
+
+<div class="modal fade" id="dlog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">
+                ※注目！
+                </h3>
+            </div>
+            <div class="modal-body">
+                <h6>これは、モーダルダイアログです。</h6>
+                <div>
+                    <input type="text" id="txt" class="form-control">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" 
+                        class="btn btn-primary"
+                        data-dismiss="modal" 
+                        onclick="doAction();">
+                    OK
+                </button>
+                <button type="button" 
+                        class="btn btn-primary"
+                        data-dismiss="modal">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<button type="button" class="btn btn-primary"
+        data-toggle="modal" data-target="#dlog">
+    Modal Dialog!
+</button>
+<script>
+function doAction() {
+    var val = $('#txt').val();
+    $('#msg').text('「' + val + '」と入力しました。');
+}
+</script>
+-->
+
+<!-- 切り替えタブ部分 -->
+<ul class="nav nav-tabs" role="tablist">
+    <!-- １つ目のタブ -->
+    <li class="nav-item">
+        <a class="nav-link active" href="#home"
+            data-toggle="tab" role="tab">Home</a>
+    </li>
+    <!-- ２つ目のタブ -->
+    <li class="nav-item">
+        <a class="nav-link" href="#middle"
+            data-toggle="tab" role="tab">Middle</a>
+    </li>
+    <!-- ３つ目のタブ -->
+    <li class="nav-item">
+        <a class="nav-link"  href="#finish"
+            data-toggle="tab" role="tab">Finish</a>
+    </li>
+</ul>
+
+
+<!-- コンテンツ部分 -->
+<div class="tab-content">
+    <!-- １つ目のコンテンツ -->
+    <div class="tab-pane fade show active" id="home" 
+            role="tabpanel">
+        ※これは、ホームページのコンテンツです。<br><br>
+        上のリンクで切り替え表示できます。
+    </div>
+    <!-- ２つ目のコンテンツ -->
+    <div class="tab-pane fade" id="middle" 
+            role="tabpanel">
+        ※これは、中央のページのコンテンツです。<br><br>
+        <div class="alert alert-primary">
+            ※中央のページを表示しています。
+        </div>
+    </div>
+    <!-- ３つ目のコンテンツ -->
+    <div class="tab-pane fade" id="finish" 
+            role="tabpanel">
+        ※これは、最後のページのコンテンツです。<br><br>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Card</h5>
+                <p class="card-text">
+                    ※サンプルとして用意したカードです。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a class="m-2 btn btn-primary" data-toggle="collapse" 
+    href="#collapse" role="button">
+    コラプスをON/OFFする
+</a>
+<div class="m-2 collapse" id="collapse">
+    <div class="alert alert-primary">
+        ※これは、コラプスで表示されるコンテンツです。<br>
+        このように表示を簡単にON/OFFできます。
+    </div>
+</div>
+
+<table class="table table-striped">
+<thead class="thead-dark">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Mail</th>
+        <th>Age</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th>1</th>
+        <td>Taro</td>
+        <td>taro@yamada</td>
+        <td>39</td>
+    </tr>
+    <tr>
+        <th>2</th>
+        <td>Hanako</td>
+        <td>hanako@flower</td>
+        <td>27</td>
+    </tr>
+    <tr>
+        <th>3</th>
+        <td>Sachiko</td>
+        <td>sachico@happy</td>
+        <td>43</td>
+    </tr>
+</tbody>
+</table>
+
+<hr>
+
+<div class="list-group">
+    <a class="list-group-item list-group-item-action list-group-item-primary"
+            href="#">Windows</a>
+    <a class="list-group-item list-group-item-action list-group-item-danger"
+            href="#">macOS</a>
+    <a class="list-group-item list-group-item-action list-group-item-warning"
+            href="#">Linux</a>
+    <a class="list-group-item list-group-item-action list-group-item-info"
+            href="#">Chrome OS</a>
+</div>
+
+<hr>
+
+<div class="list-group">
+    <a class="list-group-item list-group-item-action"
+            href="#">Windows</a>
+    <a class="list-group-item list-group-item-action"
+            href="#">macOS</a>
+    <a class="list-group-item list-group-item-action"
+            href="#">Linux</a>
+    <a class="list-group-item list-group-item-action"
+            href="#">Chrome OS</a>
+</div>
+
+<hr>
+
+<ul class="list-group">
+    <li class="list-group-item active">Windows</li>
+    <li class="list-group-item">macOS</li>
+    <li class="list-group-item disabled">Linux</li>
+    <li class="list-group-item">Chrome OS</li>
+</ul>
+
+
+<div class="jumbotron">
+    <h1 class="display-1">Jumbotron!</h1>
+    <p class="lead">This is sample Jumbotron!</p>
+    <hr>
+    <p>
+        これは、ジャンボトロンのサンプルです。
+        大きくて目立つコンテンツを表示するのに最適です。
+    </p>
+</div>
+
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">サンプルカード</h5>
+    </div>
+    <img class="card-img" src="/static/ravi.png">
+    <div class="card-body">
+        <p class="card-text">
+            これは、カードレイ・アウトのサンプルです。
+            ここにコンテンツの本文を記述して表示します。
+        </p>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block footer %} copyright 2020 Sylphy {% endblock %}
+  </div>
+</div>
